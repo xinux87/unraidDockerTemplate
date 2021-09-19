@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
   <Date>2021-09-19</Date>
-  <Beta>False</Beta>
-  <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <Name>SandstormAdminWrapper</Name>
   <Project>https://github.com/Joe-Klauza/sandstorm-admin-wrapper</Project>
   <Changes>
