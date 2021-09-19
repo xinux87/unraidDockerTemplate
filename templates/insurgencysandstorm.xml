@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2021-09-19</Date>
+  <Name>SandstormAdminWrapper</Name>
+  <Project>https://github.com/Joe-Klauza/sandstorm-admin-wrapper</Project>
+  <Changes>
+- Initial Release
+  </Changes>
+  <Overview>
+    Sandstorm Admin Wrapper
+  </Overview>
+  <Description>
+    Sandstorm Admin Wrapper (SAW) is a set of tools designed to ease the burden of hosting one or more servers for the New World Interactive video game Insurgency: Sandstorm. It is comprised of a Ruby webserver (Sinatra) and associated tools which provide an easy-to-use browser front-end for configuring and managing a server on either Linux or Windows.
+  </Description>
+  
+  <GitHub>https://github.com/Joe-Klauza/sandstorm-admin-wrapper</GitHub>
+  <Repository>xinux87/sandstorm-admin-wrapper</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Port>
+        <HostPort>27015</HostPort>
+        <ContainerPort>27015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27015</HostPort>
+        <ContainerPort>27015</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27131</HostPort>
+        <ContainerPort>27131</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27131</HostPort>
+        <ContainerPort>27131</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>51422</HostPort>
+        <ContainerPort>51422</ContainerPort>
+        <Protocol>both</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>7777</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>7777</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    <Publish/>
+  </Networking>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sandstorm/sandstorm-server</HostDir>
+      <ContainerDir>/sandstorm_server</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sandstorm/sandstorm_config</HostDir>
+      <ContainerDir>/sandstorm_config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sandstorm/sandstorm_wrapper_config</HostDir>
+      <ContainerDir>/sandstorm_wrapper_config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:51442]/web/index.html</WebUI>
+  <Banner></Banner>
+  <Icon>https://www.accesoxbox.com/img/portadas/4340/xb_4340_portada.jpg</Icon>
+</Containers>
